@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>
+        <a href="{{ url_for('views.add_record_form') }}">Add record</a>
+    </h1>
+    <h1>
+        <a href="{{ url_for('views.display_records') }}">Records</a>
+    </h1>
+{% endblock %}

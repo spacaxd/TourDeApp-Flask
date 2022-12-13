@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>{% block title %} Records {% endblock %}</h1>
+    {% for record in records %}
+        <div class='record'>
+            <p>{{ record['name'] }}
+            {{ record['time'] }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}

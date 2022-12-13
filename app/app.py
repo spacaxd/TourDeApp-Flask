@@ -2,7 +2,7 @@ import os
 
 from flask import Flask
 from . import db
-from views import views
+from .views import views
 
 app = Flask(__name__)
 
