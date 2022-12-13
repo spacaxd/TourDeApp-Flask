@@ -2,8 +2,11 @@ import os
 
 from flask import Flask
 from . import db
+from views import views
 
 app = Flask(__name__)
+
+app.register_blueprint(views, url_prefix="/")
 
 app.config.from_mapping(
     DATABASE=os.path.join(app.instance_path, 'tourdeflask.sqlite'),
@@ -16,12 +19,6 @@ except OSError:
     pass
 
 db.init_app(app)
-
-
-@app.route('/')
-def hello_world():  # put application's code here
-    return "Hello Tour de!"
-
 
 if __name__ == '__main__':
     app.run()
