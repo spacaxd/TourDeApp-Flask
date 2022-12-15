@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+
+{% block head %}
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+            integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+            crossorigin="anonymous"></script>
+{% endblock %}
+
+
+{% block content %}
+    <div>
+        <form method="post" id="reassign-form">
+            <label for="timespend_id">Time spent</label>
+            <input type="number" name="timespent" id="timespend_id" required>
+
+            <label for="language_id">Language</label>
+            <input type="text" name="language" id="language_id" required>
+
+            <label for="rating_id">Rating</label>
+            <input type="number" name="rating" id="rating_id" required>
+
+            <label for="description_id">Description</label>
+            <textarea name="description" id="description_id" required></textarea>
+
+            <button type="submit">submit</button>
+        </form>
+    </div>
+
+
+    <script>
+        $(document).on('submit', '#reassign-form', function (e) {
+            e.preventDefault();
+            $.ajax({
+                type: 'POST',
+                url: '{{url_for('views.dashboard')}}',
+                data: {
+                    timespent: $("#timespend_id").val()
+                    , language: $("#language_id").val()
+                    , rating: $("#rating_id").val()
+                    , description: $("#description_id").val()
+                },
+            })
+        });
+    </script>
+{% endblock %}
+

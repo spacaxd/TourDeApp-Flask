@@ -3,8 +3,8 @@
     <h1>{% block title %} Records {% endblock %}</h1>
     {% for record in records %}
         <div class='record'>
-            <p>{{ record['name'] }}
-            {{ record['time'] }}</p>
+            <p>{{ record['timespent'] }}
+            {{ record['language'] }}</p>
         </div>
     {% endfor %}
 {% endblock %}

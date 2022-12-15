@@ -1,6 +1,7 @@
 import os
 
 from flask import Flask
+
 from . import db
 from .views import views
 
@@ -19,6 +20,7 @@ except OSError:
     pass
 
 db.init_app(app)
+
 
 if __name__ == '__main__':
     app.run()

@@ -1,8 +1,8 @@
 CREATE TABLE IF NOT EXISTS records (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   owner TEXT NOT NULL,
-  createDate INT NOT NULL,
-  timespent INT NOT NULL,
+  createDate TEXT NOT NULL,
+  timeSpent INT NOT NULL,
   language TEXT NOT NULL,
   rating INT NOT NULL,
   description TEXT NOT NULL
