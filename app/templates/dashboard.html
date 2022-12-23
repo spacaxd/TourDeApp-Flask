@@ -5,25 +5,38 @@
     <script src="https://code.jquery.com/jquery-3.5.1.js"
             integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
             crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
 {% endblock %}
 
 
 {% block content %}
-    <div>
+    <div id="addRecordPanel">
         <form method="post" id="reassign-form">
-            <label for="timespend_id">Time spent</label>
-            <input type="number" name="timespent" id="timespend_id" required>
+            <div class="item" id="timespent">
+                <label for="timespend_id">Time spent</label>
+                <input type="number" name="timespent" id="timespend_id" required>
+            </div>
 
-            <label for="language_id">Language</label>
-            <input type="text" name="language" id="language_id" required>
+            <div class="item" id="language">
+                <label for="language_id">Language</label>
+                <input type="text" name="language" id="language_id" required>
+            </div>
 
-            <label for="rating_id">Rating</label>
-            <input type="number" name="rating" id="rating_id" required>
+            <div class="item" id="rating">
+                <label for="rating_id">Rating</label>
+                <input type="number" name="rating" id="rating_id" required>
+            </div>
 
-            <label for="description_id">Description</label>
-            <textarea name="description" id="description_id" required></textarea>
+            <div class="item" id="decscription">
+                <label for="description_id">Description</label>
+                <textarea name="description" id="description_id" required></textarea>
+            </div>
 
-            <button type="submit">submit</button>
+            <div class="item" id="submit">
+                <button type="submit">submit</button>
+            </div>
+
         </form>
     </div>
 

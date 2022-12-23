@@ -12,26 +12,6 @@ def index():  # put application's code here
     return render_template("index.html")
 
 
-@views.route('createRecord', methods=["POST"])
-def add_record():
-
-    name = request.form.get("name")
-    time = request.form.get("time")
-    conn = get_db()
-    conn.execute('INSERT INTO record (name, time) VALUES (?, ?)',
-                 (name, time))
-    conn.commit()
-    conn.close()
-
-    return "lol"
-
-
-@views.route('/addRecordForm/')
-def add_record_form():
-
-    return render_template("addRecordForm.html")
-
-
 @views.route('/records/')
 def display_records():
     conn = get_db()

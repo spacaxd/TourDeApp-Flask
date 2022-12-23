@@ -1,0 +1,39 @@
+
+
+#language {
+    height: 50px;
+    width: 200px
+}
+
+#timespent {
+    height: 50px;
+    width: 200px
+}
+
+#rating {
+    height: 50px;
+    width: 200px
+}
+
+#decscription {
+    height: 50px;
+    width: 200px
+}
+
+#submit {
+    height: 50px;
+    width: 200px
+}
+
+#reassign-form {
+
+    background-color: #C147E9;
+    display: flex;
+    margin-top: 10vh;
+    margin-left: 15vw;
+    height: 100px;
+    width: 1000px;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 10px;
+}
