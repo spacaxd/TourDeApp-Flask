@@ -1,10 +1,10 @@
-from flask import Blueprint, render_template, redirect, url_for, request
-
-from .db import get_db
 from datetime import date
 
-views = Blueprint("views", __name__)
+from flask import Blueprint, render_template, request
 
+from .db import get_db
+
+views = Blueprint("views", __name__)
 
 
 @views.route('/')
